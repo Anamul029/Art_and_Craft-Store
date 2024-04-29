@@ -5,23 +5,9 @@ const ArtCard = ({ info }) => {
     const { image, _id, stockStatus, User_Email, User_Name, customization, description, price, processing_time, rating, subcategory } = info;
     console.log(info)
     return (
-        // <div className="card card-side bg-base-100 shadow-xl">
-        //     <figure><img className="md:h-[400px]" src={image} alt="Movie" /></figure>
-        //     <div className="card-body">
-        //         <h2 className="card-title">New movie is released!</h2>
-        //         <p>Click the button to watch on Jetflix app.</p>
-        //         <div className="card-actions justify-end">
-        //             <button className="btn btn-primary">Watch</button>
-        //         </div>
-        //     </div>
-        // </div>
-
-
-
-
-
-        <div className="card card-compact md:h-[500px] w-auto bg-base-100 shadow-xl">
-            <figure><img className="md:h-[300px] md:w-[300px]" src={image} alt="Shoes" /></figure>
+        
+        <div className="card card-compact md:h-[500px] w-auto bg-yellow-200 shadow-xl">
+            <figure><img className="md:h-[350px] p-4 rounded-xl md:w-[400px]" src={image} alt="Shoes" /></figure>
             <div className="card-body">
                 <div className="items-center mx-auto">
                     {/* <h2 className="card-title">Description:{description}</h2> */}
