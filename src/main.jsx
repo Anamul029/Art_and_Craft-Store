@@ -10,6 +10,10 @@ import Home from './components/Home';
 import Register from './components/Register';
 import Login from './components/Login';
 import AuthProvider from './components/AuthProvider';
+import PrivateRoute from './components/privateRoute/PrivateRoute';
+import AddCraftItem from './components/AddCraftItem';
+import MyArt_and_CraftList from './components/MyArt_and_CraftList';
+import All_Art_and_Craft_Item from './components/allArtAndCraftItem/All_Art_and_Craft_Item';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -26,6 +30,19 @@ const router = createBrowserRouter([
       {
         path: '/login',
         element: <Login></Login>,
+      },
+      {
+        path: '/allArtandCraft',
+        element: <All_Art_and_Craft_Item></All_Art_and_Craft_Item>,
+      },
+      {
+        path: '/addItem',
+        element: <PrivateRoute><AddCraftItem></AddCraftItem></PrivateRoute>,
+      },
+      {
+        path: '/myArt',
+        element: <PrivateRoute><MyArt_and_CraftList></MyArt_and_CraftList></PrivateRoute>,
+        loader: () => fetch('http://localhost:5000/craftItems')
       }
     ]
   },

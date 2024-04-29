@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { AuthContext } from "./AuthProvider";
 import Swal from "sweetalert2";
+import { NavLink } from "react-router-dom";
 
 
 const Login = () => {
@@ -76,6 +77,8 @@ const Login = () => {
                         <div className="form-control mt-6">
                             <button className="btn btn-primary">Login</button>
                         </div>
+                        <p className="text-center">New our website?please <NavLink to="/register"><span className="font-bold text-green-700 border-b-4">Register</span></NavLink></p>
+
                     </form>
                     {/* another login part */}
                     <div className="flex flex-col gap-2 mx-auto">
