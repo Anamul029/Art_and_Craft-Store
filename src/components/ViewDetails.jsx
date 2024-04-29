@@ -7,11 +7,36 @@ const ViewDetails = () => {
     console.log(_id);
     // console.log(info)
     const info = information.find(info => info._id == _id)
-    console.log(info)
+    // console.log(info)
+    const { image,stockStatus, User_Email, User_Name, customization, description, price, processing_time, rating, subcategory } = info;
+
 
     return (
-        <div>
-            <h2>Details viewed</h2>
+        <div className="card my-12 lg:card-side bg-blue-200 shadow-xl">
+            <figure><img className="" src={image} alt="Album" /></figure>
+            <div className="card-body">
+                <h2 className="card-title">Subategory: {subcategory}</h2>
+                <hr />
+                <p>{description}</p>
+                <p>Residential areas are characterized by diverse dwellings, ranging from single-family homes to high-rise apartments, fostering community bonds and providing essential amenities like schools, parks, and shopping centers for inhabitants' convenience and comfort.</p>
+                <div className="flex justify-between my-3">
+                    <h3 className="font-semibold">Price:<span>{price}</span></h3>
+                    <h3 className="font-semibold">Status: <span>{stockStatus}</span></h3>
+                </div>
+                <hr />
+                <div className="flex justify-between my-3">
+                    <h3 className="font-semibold">Process time:{processing_time}</h3>
+                    <h3 className="font-semibold">Customization:{customization}</h3>
+                </div>
+                <div className="flex justify-between my-3">
+                    <h3 className="font-semibold">User Name:{User_Name}</h3>
+                    <h3 className="font-semibold">User Email:{User_Email}</h3>
+                </div>
+                <h3 className="my-2 text-xl text-center">Rating:{rating}</h3>
+
+               
+              
+            </div>
         </div>
     );
 };

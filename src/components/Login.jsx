@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 
 
 const Login = () => {
-    const { userLogin, googleLogin } = useContext(AuthContext)
+    const { userLogin, googleLogin, githubLogin } = useContext(AuthContext)
     const handleLogin = e => {
         e.preventDefault();
         const email = e.target.email.value;
@@ -30,7 +30,7 @@ const Login = () => {
                     title: "Oops...",
                     text: "Something went wrong! please provide currect information",
                     // footer: '<a href="#">Why do I have this issue?</a>'
-                  });
+                });
             })
 
     }
@@ -52,7 +52,20 @@ const Login = () => {
             })
     }
     const handleGitHubLogin = () => {
-
+        githubLogin()
+            .then(res => {
+                console.log(res.user)
+                Swal.fire({
+                    position: "top-end",
+                    icon: "success",
+                    title: "Successfully Login",
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+            })
+            .catch(error => {
+                console.log(error.message)
+            })
     }
     return (
         <div className="hero min-h-screen bg-base-200">
