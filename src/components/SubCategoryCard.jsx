@@ -1,7 +1,42 @@
+import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
 
 const SubCategoryCard = ({inf}) => {
     const { image, _id, stockStatus, User_Email, User_Name, customization, description, price, processing_time, rating, subcategory } = inf;
+     // delete data
+     const handleDelete = (_id) => {
+        console.log(_id)
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+        }).then((result) => {
+
+            if (result.isConfirmed) {
+
+                fetch(`https://art-and-craft-store-server-theta.vercel.app/craftItems/${_id}`, {
+                    method: 'DELETE'
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data);
+                        if (data.deletedCount > 0) {
+                            Swal.fire({
+                                title: "Deleted!",
+                                text: "Your file has been deleted.",
+                                icon: "success"
+                            });
+                            
+                        }
+                    })
+            }
+        });
+    }
 
     return (
         <div className="card card-compact md:h-[600px] w-auto bg-yellow-200 shadow-xl">
@@ -30,8 +65,8 @@ const SubCategoryCard = ({inf}) => {
                 </div>
                 <div className="card-actions justify-around">
                     {/* <button className="btn w-3/4 btn-primary"><Link to={`/details/${_id}`}>View Details</Link></button> */}
-                    {/* <button className="btn btn-primary bg-green-600"><Link to={`/update/${_id}`}>Update Data</Link></button>
-                    <button onClick={() => handleDelete(_id)} className="btn btn-primary bg-red-600">Delete Data</button> */}
+                    <button className="btn btn-primary bg-green-600"><Link to={`/update/${_id}`}>Update Data</Link></button>
+                    <button onClick={() => handleDelete(_id)} className="btn btn-primary bg-red-600">Delete Data</button>
                 </div>
             </div>
         </div>

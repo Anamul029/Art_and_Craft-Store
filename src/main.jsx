@@ -39,7 +39,7 @@ const router = createBrowserRouter([
       {
         path: '/allArtandCraft',
         element: <All_Art_and_Craft_Item></All_Art_and_Craft_Item>,
-        loader:()=> fetch('https://art-and-craft-store-server-theta.vercel.app/craftItems')
+        // loader:()=> fetch('https://art-and-craft-store-server-theta.vercel.app/craftItems')
       },
       {
         path: '/addItem',
