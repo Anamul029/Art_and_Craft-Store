@@ -1,5 +1,5 @@
 
-import { useLoaderData } from "react-router-dom";
+// import { useLoaderData } from "react-router-dom";
 import ArtCard from "./ArtCard";
 import { useEffect, useState } from "react";
 
@@ -8,7 +8,7 @@ const MyArt_and_CraftList = () => {
     // const information=useLoaderData()
     const[update,setUpdate]=useState([])
     useEffect(()=>{
-        fetch('http://localhost:5000/craftItems')
+        fetch('https://art-and-craft-store-server-theta.vercel.app/craftItems')
         .then(res=>res.json())
         .then(data=>setUpdate(data))
     },[update])

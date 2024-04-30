@@ -19,7 +19,7 @@ const AddCraftItem = () => {
        const information={image,item_name,subcategory,description,price,rating,customization,processing_time,stockStatus,User_Email,User_Name}
        console.log(information);
     //    fetch
-    fetch('http://localhost:5000/craftItems',{
+    fetch('https://art-and-craft-store-server-theta.vercel.app/craftItems',{
       method:'POST',
       headers:{
         'content-type':'application/json'

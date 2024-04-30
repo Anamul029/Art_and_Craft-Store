@@ -26,7 +26,7 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home></Home>,
-        loader:()=>fetch('http://localhost:5000/caregories')
+        loader:()=>fetch('https://art-and-craft-store-server-theta.vercel.app/caregories')
       },
       {
         path: '/register',
@@ -47,16 +47,16 @@ const router = createBrowserRouter([
       {
         path: '/myArt',
         element: <PrivateRoute><MyArt_and_CraftList></MyArt_and_CraftList></PrivateRoute>,
-        loader: () => fetch('http://localhost:5000/craftItems')
+        loader: () => fetch('https://art-and-craft-store-server-theta.vercel.app/craftItems')
       },
       {
-        path: "/details/:_id",
+        path: "/details/:subcategory_name",
         element: <PrivateRoute><ViewDetails></ViewDetails></PrivateRoute>,
-        loader: () => fetch('http://localhost:5000/craftItems')
+        loader: () => fetch('https://art-and-craft-store-server-theta.vercel.app/craftItems')
       },
       {
         path:'/update/:_id',
-        element:<Update></Update>
+        element:<PrivateRoute><Update></Update></PrivateRoute>,
       }
 
     ]

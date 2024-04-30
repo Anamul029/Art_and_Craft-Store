@@ -22,7 +22,7 @@ const Update = () => {
         // update data
     
         
-        fetch(`http://localhost:5000/craftItems/${_id}`, {
+        fetch(`https://art-and-craft-store-server-theta.vercel.app/craftItems/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
@@ -46,7 +46,7 @@ const Update = () => {
     }
     return (
         <div>
-            <h4 className="text-2xl font-semibold text-center my-6">Update Data Here</h4>
+            <h4 className="text-2xl font-semibold text-center my-6">Update Your Data Here</h4>
             <form onSubmit={handleUpdateData} className="bg-blue-50 p-6 rounded-xl">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {/* input one */}
