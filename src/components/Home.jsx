@@ -98,6 +98,14 @@ const Home = () => {
                     </div>
                 </div>
             </div>
+            {/* second extra section */}
+            <div className="my-6 md:my-16">
+                <h3 className="text-2xl font-semibold text-center my-6">Please sent Your important feedback for our website  </h3>
+                <form>
+                    <textarea className="border-2 border-solid w-full border-black" name="feedback" id="" cols="50" rows="10"></textarea>
+                    <button className="btn btn-primary bg-green-600 w-full">Submit Your feedback</button>
+                </form>
+            </div>
         </div>
     );
 };
