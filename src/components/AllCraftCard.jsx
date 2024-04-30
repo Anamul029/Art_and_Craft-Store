@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
 
-const ArtCard = ({ info}) => {
+const AllCraftCard = ({ info }) => {
     const { image, _id, stockStatus, User_Email, User_Name, customization, description, price, processing_time, rating, subcategory } = info;
     // console.log(info)
     // delete data
@@ -74,4 +74,4 @@ const ArtCard = ({ info}) => {
     );
 };
 
-export default ArtCard;
+export default AllCraftCard;

@@ -1,17 +1,19 @@
 
 // import { useLoaderData } from "react-router-dom";
 import ArtCard from "./ArtCard";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { AuthContext } from "./AuthProvider";
 
 
 const MyArt_and_CraftList = () => {
     // const information=useLoaderData()
+    const {user}=useContext(AuthContext)
     const[update,setUpdate]=useState([])
     useEffect(()=>{
-        fetch('https://art-and-craft-store-server-theta.vercel.app/craftItems')
+        fetch(`https://art-and-craft-store-server-theta.vercel.app/craftItems-user/${user.email}`)
         .then(res=>res.json())
         .then(data=>setUpdate(data))
-    },[update])
+    },[update,user])
     // console.log(information)
     return (
         <div className="mt-12">

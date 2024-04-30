@@ -49,77 +49,77 @@ const AddCraftItem = () => {
                     {/* input one */}
                     <div className="form-control">
                         <label className="label">
-                            <span className="label-text">Image URL</span>
+                            <span className="label-text font-semibold text-black">Image URL</span>
                         </label>
                         <input type="text" name="image" placeholder="image url" className="input input-bordered" required />
                     </div>
                     {/* input one */}
                     <div className="form-control">
                         <label className="label">
-                            <span className="label-text">Item name</span>
+                            <span className="label-text font-semibold text-black">Item name</span>
                         </label>
                         <input type="text" placeholder="image url" className="input input-bordered" required />
                     </div>
                     {/* input one */}
                     <div className="form-control">
                         <label className="label">
-                            <span className="label-text">subcategory_Name</span>
+                            <span className="label-text font-semibold text-black">subcategory_Name</span>
                         </label>
                         <input type="text" placeholder="subcategory_Name" name="subcategory" className="input input-bordered" required />
                     </div>
                     {/* input one */}
                     <div className="form-control">
                         <label className="label">
-                            <span className="label-text">short description</span>
+                            <span className="label-text font-semibold text-black">short description</span>
                         </label>
                         <input type="text" placeholder="short description" name="description" className="input input-bordered" required />
                     </div>
                     {/* input one */}
                     <div className="form-control">
                         <label className="label">
-                            <span className="label-text">Price</span>
+                            <span className="label-text font-semibold text-black">Price</span>
                         </label>
                         <input type="text" placeholder="price" name="price" className="input input-bordered" required />
                     </div>
                     {/* input one */}
                     <div className="form-control">
                         <label className="label">
-                            <span className="label-text">rating</span>
+                            <span className="label-text font-semibold text-black">rating</span>
                         </label>
                         <input type="text" placeholder="rating" name="rating" className="input input-bordered" required />
                     </div>
                     {/* input one */}
                     <div className="form-control">
                         <label className="label">
-                            <span className="label-text">customization</span>
+                            <span className="label-text font-semibold text-black">customization</span>
                         </label>
                         <input type="text" placeholder="customization" name="customization" className="input input-bordered" required />
                     </div>
                     {/* input one */}
                     <div className="form-control">
                         <label className="label">
-                            <span className="label-text">processing_time</span>
+                            <span className="label-text font-semibold text-black">processing_time</span>
                         </label>
                         <input type="text" placeholder="processing_time" name="processing_time" className="input input-bordered" required />
                     </div>
                     {/* input one */}
                     <div className="form-control">
                         <label className="label">
-                            <span className="label-text">stockStatus</span>
+                            <span className="label-text font-semibold text-black">stockStatus</span>
                         </label>
                         <input type="text" placeholder="stockStatus" name="stockStatus" className="input input-bordered" required />
                     </div>
                     {/* input one */}
                     <div className="form-control">
                         <label className="label">
-                            <span className="label-text">User Email</span>
+                            <span className="label-text font-semibold text-black">User Email</span>
                         </label>
                         <input type="email" placeholder="User Email" name="User_Email" className="input input-bordered" required />
                     </div>
                     {/* input one */}
                     <div className="form-control">
                         <label className="label">
-                            <span className="label-text">User Name</span>
+                            <span className="label-text font-semibold text-black">User Name</span>
                         </label>
                         <input type="text" placeholder="User name" name="User_Name" className="input input-bordered" required />
                     </div>

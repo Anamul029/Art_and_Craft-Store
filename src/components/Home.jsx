@@ -47,6 +47,10 @@ const Home = () => {
                     categoryData.map(category => <CategoryCard category={category} key={category._id}></CategoryCard>)
                 }
             </div>
+
+
+            {/* extra section */}
+            
         </div>
     );
 };
