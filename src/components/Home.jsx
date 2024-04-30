@@ -3,9 +3,9 @@ import CategoryCard from "./CategoryCard";
 
 
 const Home = () => {
-   const categoryData=useLoaderData()
-   console.log(categoryData)
-   const {_id,image,short_description,subcategory_name}=categoryData;
+    const categoryData = useLoaderData()
+    console.log(categoryData)
+    const { _id, image, short_description, subcategory_name } = categoryData;
     return (
         <div>
            
@@ -44,7 +44,7 @@ const Home = () => {
             <h3 className="text-2xl font-semibold text-center my-14">Art & Craft Categories</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-16 container mx-auto">
                 {
-                    categoryData.map(category=><CategoryCard category={category} key={category._id}></CategoryCard>)
+                    categoryData.map(category => <CategoryCard category={category} key={category._id}></CategoryCard>)
                 }
             </div>
         </div>
