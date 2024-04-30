@@ -1,8 +1,8 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+project name:Art and Craft Store
+Website live link: https://assignment-10-4f3d0.web.app
+Features:
+1.User can create his profile
+2.User can add art and craft related card.
+3.When user click the home Subcategory view datails page,at that time all tha same subcategory data will show.
+4.User can give his valuable feedback for our website.
+5.website has also a FAQ section for users
